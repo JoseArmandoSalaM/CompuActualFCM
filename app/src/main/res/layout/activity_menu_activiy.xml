@@ -21,6 +21,7 @@
 
 
     <Button
+        android:id="@+id/btnEquipos"
         style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -29,6 +30,7 @@
         android:textColor="@color/Bu" />
 
     <Button
+        android:id="@+id/btnLogout"
         style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
         android:layout_width="match_parent"
         android:layout_height="60dp"
