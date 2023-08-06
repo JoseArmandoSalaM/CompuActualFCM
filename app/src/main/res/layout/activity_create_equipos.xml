@@ -7,7 +7,7 @@
         android:gravity="center"
         android:padding="12dp"
         android:orientation="vertical"
-        tools:context=".CreateEquipos">
+        tools:context=".ui.CreateEquipos">
 
     <TextView
         android:layout_marginTop="12dp"

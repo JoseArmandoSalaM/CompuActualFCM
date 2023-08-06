@@ -1,11 +1,13 @@
-package com.example.compuactualfcm
+package com.example.compuactualfcm.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.compuactualfcm.PreferenceHelper
 import com.example.compuactualfcm.PreferenceHelper.set
+import com.example.compuactualfcm.R
 
 class MenuActiviy : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

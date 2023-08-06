@@ -1,10 +1,11 @@
-package com.example.compuactualfcm
+package com.example.compuactualfcm.ui
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.compuactualfcm.R
 import com.example.compuactualfcm.model.Appoiment
 
 class AppoitmentAdapter(private val appointments: ArrayList<Appoiment>)

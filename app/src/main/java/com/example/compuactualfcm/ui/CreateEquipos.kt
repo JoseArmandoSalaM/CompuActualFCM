@@ -1,9 +1,10 @@
-package com.example.compuactualfcm
+package com.example.compuactualfcm.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.compuactualfcm.R
 import com.example.compuactualfcm.model.Appoiment
 
 class CreateEquipos : AppCompatActivity() {

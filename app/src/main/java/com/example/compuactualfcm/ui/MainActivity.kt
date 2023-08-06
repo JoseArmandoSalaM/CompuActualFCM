@@ -1,4 +1,4 @@
-package com.example.compuactualfcm
+package com.example.compuactualfcm.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,15 +6,17 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.compuactualfcm.PreferenceHelper
 import com.example.compuactualfcm.PreferenceHelper.get
 import com.example.compuactualfcm.PreferenceHelper.set
+import com.example.compuactualfcm.R
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
     val lay: LinearLayout by lazy { findViewById(R.id.mainlayout) }
     private val snackBar by lazy {
-        Snackbar.make(lay,R.string.press_back_again,Snackbar.LENGTH_SHORT)
+        Snackbar.make(lay, R.string.press_back_again,Snackbar.LENGTH_SHORT)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
