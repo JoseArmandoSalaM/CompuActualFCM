@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.compuactualfcm.PreferenceHelper
-import com.example.compuactualfcm.PreferenceHelper.set
+import com.example.compuactualfcm.util.PreferenceHelper
+import com.example.compuactualfcm.util.PreferenceHelper.set
 import com.example.compuactualfcm.R
 
 class MenuActiviy : AppCompatActivity() {

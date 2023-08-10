@@ -1,4 +1,4 @@
-package com.example.compuactualfcm
+package com.example.compuactualfcm.util
 
 import android.content.Context
 import android.content.SharedPreferences

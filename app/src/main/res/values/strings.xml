@@ -10,4 +10,7 @@
     <string name="welcome">Bienvenido a CompuActual</string>
     <string name="Miscitasmedicas">Mis equipos</string>
     <string name="press_back_again">Precione una vez mas para salir</string>
+    <string name="default_notification_channel_id">default_channel</string>
+    <string name="default_channel">default_channel</string>
+
 </resources>
