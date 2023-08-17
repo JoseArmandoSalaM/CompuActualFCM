@@ -15,3 +15,8 @@ dependencyResolutionManagement {
 rootProject.name = "CompuActualFCM"
 include ':app'
 include ':app:compuactual'
+include ':compuactualfcm'
+include ':compuactualfcm2'
+include ':compuactualfcm3'
+include ':compuac'
+include ':cp'

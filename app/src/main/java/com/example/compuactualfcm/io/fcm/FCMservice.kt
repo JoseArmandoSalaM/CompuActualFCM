@@ -16,6 +16,11 @@ import com.google.firebase.messaging.RemoteMessage
 
 class FCMservice : FirebaseMessagingService() {
 
+    fun onNewTok(newToken: String){
+        super.onNewToken(newToken)
+
+    }
+
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
 
         Log.d(TAG, "From: " + remoteMessage.from)
@@ -60,11 +65,6 @@ class FCMservice : FirebaseMessagingService() {
         // TODO: Implement this method to send token to your app server.
     }
 
-    /**
-     * Create and show a simple notification containing the received FCM message.
-     *
-     * @param messageBody FCM message body received.
-     */
     private fun sendNotification(messageBody: String?) {
         val intent = Intent(this, MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)

@@ -8,9 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.compuactualfcm.R
 import com.example.compuactualfcm.model.Appoiment
 
-class AppoitmentAdapter(private val appointments: ArrayList<Appoiment>)
+class AppoitmentAdapter
     : RecyclerView.Adapter<AppoitmentAdapter.ViewHolder>() {
 
+    var appointments = ArrayList<Appoiment>()
     class ViewHolder(itentView: View) : RecyclerView.ViewHolder(itentView){
         val twAppoimentId = itentView.findViewById<TextView>(R.id.twAppoiment)
         val twmedicoId = itentView.findViewById<TextView>(R.id.twmedicoId)
@@ -32,9 +33,9 @@ class AppoitmentAdapter(private val appointments: ArrayList<Appoiment>)
         val appoiment = appointments[position]
 
         holder.twAppoimentId.text = "ID de su equipo #${appoiment.id}"
-        holder.twmedicoId.text = "Nombre del tecnico: ${appoiment.TecnicoName}"
-        holder.twfechaprog.text = "Estado: ${appoiment.Estado}"
-        holder.twhora.text = "Dinero que dejo a cuenta: ${appoiment.cuenta}"
+        holder.twmedicoId.text = "El folio de su equipo: ${appoiment.folio}"
+        holder.twfechaprog.text = "El tipo se servicio: ${appoiment.servicio}"
+        holder.twhora.text = "Problema: ${appoiment.problema}"
     }
 
 }

@@ -12,6 +12,11 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/app/compuactual" />
+            <option value="$PROJECT_DIR$/compuac" />
+            <option value="$PROJECT_DIR$/compuactualfcm" />
+            <option value="$PROJECT_DIR$/compuactualfcm2" />
+            <option value="$PROJECT_DIR$/compuactualfcm3" />
+            <option value="$PROJECT_DIR$/cp" />
           </set>
         </option>
       </GradleProjectSettings>

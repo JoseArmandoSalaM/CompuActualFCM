@@ -51,7 +51,6 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
         //extraer id del xml
         val button = findViewById<Button>(R.id.tvRegister)
 
@@ -63,6 +62,7 @@ class MainActivity : AppCompatActivity() {
         val preferences = PreferenceHelper.defaultPrefs(this)
         if(preferences["token", ""].contains("."))
             gotoMenuActiviy()
+
 
         //darle una funccion al boton
         button.setOnClickListener {
@@ -76,24 +76,25 @@ class MainActivity : AppCompatActivity() {
         val password = findViewById<EditText>(R.id.etPassword)
 
 
-       val call = apiService.postLogin(email.text.toString(), password.text.toString())
+       val call = apiService.postLogin(email.text.toString().trim(), password.text.toString().trim())
         call.enqueue(object: Callback<LoginResponse>{
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
 
                 if(response.isSuccessful){
                     val loginRespon = response.body()
                     if (loginRespon == null) {
-                        toast("Se obtuvo una respuesta inesperada del servidor")
+                        toast("Las credenciales son incorrectas")
                         return
-                        }
-                    if (loginRespon.suscces){
-                        createSessionPreference(loginRespon.accesToken)
+                    }
+
+                    if (loginRespon.success){
+                        createSessionPreference(loginRespon.accessToken)
                         gotoMenuActiviy()
                     }else{
                         toast("Las credenciales son incorrectas")
                     }
                 }else{
-                    toast("Se obtuvo una respuesta inesperada del servidor")
+                    toast("Credenciales incorrectas")
                 }
             }
 
@@ -111,13 +112,17 @@ class MainActivity : AppCompatActivity() {
         //editor.apply()
 
         val preferences = PreferenceHelper.defaultPrefs(this)
-        preferences["accessToken"] = accessToken
+        preferences["token"] = accessToken
 
         }
 
-    private fun gotoMenuActiviy() {
+    private fun gotoMenuActiviy(isUserInput: Boolean = false) {
         Toast.makeText(this, "¡Bienvenido!", Toast.LENGTH_SHORT).show()
         val intent = Intent(this, MenuActiviy::class.java)
+
+        if(isUserInput){
+            intent.putExtra("store_token",true)
+        }
         startActivity(intent)
         finish()
     }
